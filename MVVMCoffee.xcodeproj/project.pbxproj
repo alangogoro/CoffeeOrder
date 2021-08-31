@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		CEEE14B826DE24AB0087E6AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEE14B726DE24AB0087E6AD /* AppDelegate.swift */; };
 		CEEE14BA26DE24AB0087E6AD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEE14B926DE24AB0087E6AD /* SceneDelegate.swift */; };
-		CEEE14BC26DE24AB0087E6AD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEE14BB26DE24AB0087E6AD /* ViewController.swift */; };
 		CEEE14BF26DE24AB0087E6AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEEE14BD26DE24AB0087E6AD /* Main.storyboard */; };
 		CEEE14C126DE24AF0087E6AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEEE14C026DE24AF0087E6AD /* Assets.xcassets */; };
 		CEEE14C426DE24AF0087E6AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEEE14C226DE24AF0087E6AD /* LaunchScreen.storyboard */; };
+		CEEE14CD26DE26AB0087E6AD /* OrdersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEE14CC26DE26AB0087E6AD /* OrdersTableViewController.swift */; };
+		CEEE14CF26DE27020087E6AD /* AddOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEE14CE26DE27020087E6AD /* AddOrderViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CEEE14B426DE24AB0087E6AD /* MVVMCoffee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVVMCoffee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEEE14B726DE24AB0087E6AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEEE14B926DE24AB0087E6AD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CEEE14BB26DE24AB0087E6AD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CEEE14BE26DE24AB0087E6AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CEEE14C026DE24AF0087E6AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CEEE14C326DE24AF0087E6AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CEEE14C526DE24AF0087E6AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEEE14CC26DE26AB0087E6AD /* OrdersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersTableViewController.swift; sourceTree = "<group>"; };
+		CEEE14CE26DE27020087E6AD /* AddOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOrderViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +58,24 @@
 		CEEE14B626DE24AB0087E6AD /* MVVMCoffee */ = {
 			isa = PBXGroup;
 			children = (
+				CEEE14CB26DE24E60087E6AD /* Controllers */,
 				CEEE14B726DE24AB0087E6AD /* AppDelegate.swift */,
 				CEEE14B926DE24AB0087E6AD /* SceneDelegate.swift */,
-				CEEE14BB26DE24AB0087E6AD /* ViewController.swift */,
 				CEEE14BD26DE24AB0087E6AD /* Main.storyboard */,
 				CEEE14C026DE24AF0087E6AD /* Assets.xcassets */,
 				CEEE14C226DE24AF0087E6AD /* LaunchScreen.storyboard */,
 				CEEE14C526DE24AF0087E6AD /* Info.plist */,
 			);
 			path = MVVMCoffee;
+			sourceTree = "<group>";
+		};
+		CEEE14CB26DE24E60087E6AD /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CEEE14CC26DE26AB0087E6AD /* OrdersTableViewController.swift */,
+				CEEE14CE26DE27020087E6AD /* AddOrderViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,9 +148,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CEEE14BC26DE24AB0087E6AD /* ViewController.swift in Sources */,
 				CEEE14B826DE24AB0087E6AD /* AppDelegate.swift in Sources */,
 				CEEE14BA26DE24AB0087E6AD /* SceneDelegate.swift in Sources */,
+				CEEE14CD26DE26AB0087E6AD /* OrdersTableViewController.swift in Sources */,
+				CEEE14CF26DE27020087E6AD /* AddOrderViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
