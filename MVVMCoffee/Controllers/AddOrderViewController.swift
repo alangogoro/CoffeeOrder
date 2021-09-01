@@ -9,5 +9,12 @@ import Foundation
 import UIKit
 
 class AddOrderViewController: UIViewController {
+    // MARK: - Properties
+    
+    // MARK: - Lifecycle
+    
+    // MARK: - Selector
+    
+    // MARK: - Helper
     
 }

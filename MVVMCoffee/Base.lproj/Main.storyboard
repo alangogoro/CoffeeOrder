@@ -50,10 +50,68 @@
                     <view key="view" contentMode="scaleToFill" id="qKg-dG-mGS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="J7X-o5-G9t">
+                                <rect key="frame" x="0.0" y="56" width="414" height="421"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="rhB-do-IOo">
+                                        <rect key="frame" x="0.0" y="24.5" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rhB-do-IOo" id="SW3-Ol-dUD">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="jHl-6l-BWp">
+                                <rect key="frame" x="104" y="521" width="206" height="32"/>
+                                <segments>
+                                    <segment title="Small"/>
+                                    <segment title="Medium"/>
+                                    <segment title="Large"/>
+                                </segments>
+                            </segmentedControl>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="wBY-Ht-aIx">
+                                <rect key="frame" x="107" y="580" width="200" height="86"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R5c-oi-DG5">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="kg4-kn-KtX"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XTa-Lg-2xP">
+                                        <rect key="frame" x="0.0" y="52" width="200" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="eMs-jy-w0l"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="VCK-Sq-34H"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="J7X-o5-G9t" firstAttribute="top" secondItem="VCK-Sq-34H" secondAttribute="top" id="Ece-08-ktx"/>
+                            <constraint firstItem="wBY-Ht-aIx" firstAttribute="top" secondItem="jHl-6l-BWp" secondAttribute="bottom" constant="28" id="NLH-ot-sW8"/>
+                            <constraint firstItem="J7X-o5-G9t" firstAttribute="height" secondItem="qKg-dG-mGS" secondAttribute="height" multiplier="1:2" priority="1" id="VkM-Xu-ExK"/>
+                            <constraint firstItem="wBY-Ht-aIx" firstAttribute="centerX" secondItem="qKg-dG-mGS" secondAttribute="centerX" id="Xah-cs-Kxw"/>
+                            <constraint firstItem="jHl-6l-BWp" firstAttribute="top" secondItem="J7X-o5-G9t" secondAttribute="bottom" constant="44" id="g6f-9a-vWa"/>
+                            <constraint firstItem="J7X-o5-G9t" firstAttribute="leading" secondItem="VCK-Sq-34H" secondAttribute="leading" id="i9w-C0-7zc"/>
+                            <constraint firstItem="J7X-o5-G9t" firstAttribute="width" secondItem="qKg-dG-mGS" secondAttribute="width" id="iPQ-Nb-v1A"/>
+                            <constraint firstItem="jHl-6l-BWp" firstAttribute="centerX" secondItem="qKg-dG-mGS" secondAttribute="centerX" id="uJs-VY-w6c"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Add New Order" id="9PO-5O-k0K"/>
+                    <navigationItem key="navigationItem" title="Add New Order" id="9PO-5O-k0K">
+                        <barButtonItem key="leftBarButtonItem" title="Close" id="QTj-lc-Egq"/>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="Nb6-vt-EMw"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qGr-xg-TA4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
