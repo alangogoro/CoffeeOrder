@@ -101,13 +101,13 @@ class AddOrderViewController: UIViewController,
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // 設定點選後的打勾式樣
+        // ⭐️ 增加打勾圖示
         tableView.cellForRow(at: indexPath)?.accessoryType = .checkmark
         tableView.cellForRow(at: indexPath)?.selectionStyle = .none
     }
     
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-        // 設定取消點選後，消除式樣
+        // ⭐️ 未被選取的，取消打勾圖示
         tableView.cellForRow(at: indexPath)?.accessoryType = .none
     }
     

@@ -10,7 +10,7 @@ import Foundation
 struct Resource<T: Codable> {
     let url: URL
     var httpMethod: HttpMethod = .get
-    var body: Data? = nil
+    var httpBody: Data? = nil
     
     init(url: URL) {
         self.url = url
@@ -32,10 +32,10 @@ class Webservice {
     
     func load<T>(resource: Resource<T>,
                  completion: @escaping (Result<T, NetworkError>) -> Void ) {
-        
+        // ⭐️ 生成 URLRequest
         var request = URLRequest(url: resource.url)
         request.httpMethod = resource.httpMethod.rawValue
-        request.httpBody   = resource.body
+        request.httpBody   = resource.httpBody
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         
         URLSession.shared.dataTask(with: request) { data, response, error in

@@ -15,8 +15,8 @@ struct Order: Codable {
 }
 
 /* ⭐️ CaseIterable 協定
- * 遵從之後，可以調用 allCases 屬性取得包含全部枚舉的陣列
- * [cappuccino, latte, espressino, cortado] */
+ * 使 enum 遵從 CaseIterable 協定後，可以調用 .allCases
+ * 來取得包含所有 case 的 enum 陣列。也就可以再利用陣列的 .count 等屬性 */
 enum CoffeeType: String, Codable, CaseIterable {
     case cappuccino, latte, espressino, cortado
 }
@@ -60,7 +60,7 @@ extension Order {
         
         var resource = Resource<Order?>(url: url)
         resource.httpMethod = HttpMethod.post
-        resource.body = data
+        resource.httpBody = data
         
         return resource
     }
