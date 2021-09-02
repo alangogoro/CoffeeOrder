@@ -9,9 +9,6 @@ import Foundation
 
 struct OrderViewModel {
     let order: Order
-}
-
-extension OrderViewModel {
     var name: String {
         return self.order.name
     }

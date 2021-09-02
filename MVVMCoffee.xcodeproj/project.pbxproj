@@ -74,8 +74,8 @@
 			children = (
 				CEEE14D326DF67B90087E6AD /* Models */,
 				CEA660B626DF733B00540310 /* ViewModels */,
-				CEEE14D026DF639A0087E6AD /* Services */,
 				CEEE14CB26DE24E60087E6AD /* Controllers */,
+				CEEE14D026DF639A0087E6AD /* Services */,
 				CEEE14B726DE24AB0087E6AD /* AppDelegate.swift */,
 				CEEE14B926DE24AB0087E6AD /* SceneDelegate.swift */,
 				CEEE14BD26DE24AB0087E6AD /* Main.storyboard */,
