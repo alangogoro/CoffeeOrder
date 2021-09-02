@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE0BA3DD26E076190060D9FE /* AddCoffeeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0BA3DC26E076190060D9FE /* AddCoffeeViewModel.swift */; };
 		CEA660B826DF734E00540310 /* OrderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA660B726DF734E00540310 /* OrderViewModel.swift */; };
 		CEEE14B826DE24AB0087E6AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEE14B726DE24AB0087E6AD /* AppDelegate.swift */; };
 		CEEE14BA26DE24AB0087E6AD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEE14B926DE24AB0087E6AD /* SceneDelegate.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CE0BA3DC26E076190060D9FE /* AddCoffeeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCoffeeViewModel.swift; sourceTree = "<group>"; };
 		CEA660B726DF734E00540310 /* OrderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewModel.swift; sourceTree = "<group>"; };
 		CEEE14B426DE24AB0087E6AD /* MVVMCoffee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVVMCoffee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEEE14B726DE24AB0087E6AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +51,7 @@
 			isa = PBXGroup;
 			children = (
 				CEA660B726DF734E00540310 /* OrderViewModel.swift */,
+				CE0BA3DC26E076190060D9FE /* AddCoffeeViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -184,6 +187,7 @@
 				CEEE14D526DF67DE0087E6AD /* Order.swift in Sources */,
 				CEEE14B826DE24AB0087E6AD /* AppDelegate.swift in Sources */,
 				CEEE14BA26DE24AB0087E6AD /* SceneDelegate.swift in Sources */,
+				CE0BA3DD26E076190060D9FE /* AddCoffeeViewModel.swift in Sources */,
 				CEEE14CD26DE26AB0087E6AD /* OrdersTableViewController.swift in Sources */,
 				CEEE14D226DF63AE0087E6AD /* Webservice.swift in Sources */,
 				CEA660B826DF734E00540310 /* OrderViewModel.swift in Sources */,

@@ -80,17 +80,13 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="gcD-G3-TiP" id="K1j-br-u1N"/>
+                                    <outlet property="delegate" destination="gcD-G3-TiP" id="AeC-l7-JcB"/>
+                                </connections>
                             </tableView>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="jHl-6l-BWp">
-                                <rect key="frame" x="104" y="521" width="206" height="32"/>
-                                <segments>
-                                    <segment title="Small"/>
-                                    <segment title="Medium"/>
-                                    <segment title="Large"/>
-                                </segments>
-                            </segmentedControl>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="wBY-Ht-aIx">
-                                <rect key="frame" x="107" y="580" width="200" height="86"/>
+                                <rect key="frame" x="107" y="638" width="200" height="86"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R5c-oi-DG5">
                                         <rect key="frame" x="0.0" y="0.0" width="200" height="34"/>
@@ -114,20 +110,31 @@
                         <viewLayoutGuide key="safeArea" id="VCK-Sq-34H"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="VCK-Sq-34H" firstAttribute="bottom" secondItem="wBY-Ht-aIx" secondAttribute="bottom" constant="84" id="9Ou-Fp-18o"/>
                             <constraint firstItem="J7X-o5-G9t" firstAttribute="top" secondItem="VCK-Sq-34H" secondAttribute="top" id="Ece-08-ktx"/>
-                            <constraint firstItem="wBY-Ht-aIx" firstAttribute="top" secondItem="jHl-6l-BWp" secondAttribute="bottom" constant="28" id="NLH-ot-sW8"/>
                             <constraint firstItem="J7X-o5-G9t" firstAttribute="height" secondItem="qKg-dG-mGS" secondAttribute="height" multiplier="1:2" priority="1" id="VkM-Xu-ExK"/>
                             <constraint firstItem="wBY-Ht-aIx" firstAttribute="centerX" secondItem="qKg-dG-mGS" secondAttribute="centerX" id="Xah-cs-Kxw"/>
-                            <constraint firstItem="jHl-6l-BWp" firstAttribute="top" secondItem="J7X-o5-G9t" secondAttribute="bottom" constant="44" id="g6f-9a-vWa"/>
                             <constraint firstItem="J7X-o5-G9t" firstAttribute="leading" secondItem="VCK-Sq-34H" secondAttribute="leading" id="i9w-C0-7zc"/>
                             <constraint firstItem="J7X-o5-G9t" firstAttribute="width" secondItem="qKg-dG-mGS" secondAttribute="width" id="iPQ-Nb-v1A"/>
-                            <constraint firstItem="jHl-6l-BWp" firstAttribute="centerX" secondItem="qKg-dG-mGS" secondAttribute="centerX" id="uJs-VY-w6c"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Add New Order" id="9PO-5O-k0K">
-                        <barButtonItem key="leftBarButtonItem" title="Close" id="QTj-lc-Egq"/>
-                        <barButtonItem key="rightBarButtonItem" title="Save" id="Nb6-vt-EMw"/>
+                        <barButtonItem key="leftBarButtonItem" title="Close" id="QTj-lc-Egq">
+                            <connections>
+                                <action selector="close" destination="gcD-G3-TiP" id="WQq-I6-6Xc"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="Nb6-vt-EMw">
+                            <connections>
+                                <action selector="saveOrder" destination="gcD-G3-TiP" id="621-EJ-uwT"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="emailTextField" destination="XTa-Lg-2xP" id="zJv-ak-13T"/>
+                        <outlet property="nameTextField" destination="R5c-oi-DG5" id="yNp-l0-A0f"/>
+                        <outlet property="tableView" destination="J7X-o5-G9t" id="0TT-1f-5qL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qGr-xg-TA4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

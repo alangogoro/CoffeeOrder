@@ -8,25 +8,32 @@
 import Foundation
 import UIKit
 
-class OrdersTableViewController: UITableViewController {
+class OrdersTableViewController: UITableViewController, AddOrderViewControllerDelegate {
     
-    var orderViewModels = OrderListViewModel()
+    // MARK: - Properties
+    var orderListViewModel = OrderListViewModel()
     
+    
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         populateOrders()
     }
     
-    private func populateOrders() {
-        guard let ordersUrl = URL(string: "https://guarded-retreat-82533.herokuapp.com/orders") else {
-            fatalError("API URL was incorrect")
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let nav = segue.destination as? UINavigationController,
+              let addOrder = nav.viewControllers.first as? AddOrderViewController else {
+            fatalError("Error performing segue!")
         }
-        
-        let resource = Resource<[Order]>(url: ordersUrl)
-        Webservice().load(resource: resource) { [weak self] result in
+        addOrder.delegate = self
+    }
+    
+    // MARK: - Helpers
+    private func populateOrders() {
+        Webservice().load(resource: Order.allOrder) { [weak self] result in
             switch result {
             case .success(let orders):
-                self?.orderViewModels.orderViewModels = orders.map(OrderViewModel.init)
+                self?.orderListViewModel.orderViewModels = orders.map(OrderViewModel.init)
                 self?.tableView.reloadData()
             case .failure(let error):
                 debugPrint(error)
@@ -34,16 +41,17 @@ class OrdersTableViewController: UITableViewController {
         }
     }
     
+    // MARK: - TableView delegates
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return orderViewModels.orderViewModels.count
+        return orderListViewModel.orderViewModels.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let viewModel = orderViewModels.orderViewModel(at: indexPath.row)
+        let viewModel = orderListViewModel.orderViewModel(at: indexPath.row)
         let cell = tableView.dequeueReusableCell(withIdentifier: "OrderCell",
                                                  for: indexPath)
         
@@ -51,4 +59,23 @@ class OrdersTableViewController: UITableViewController {
         cell.detailTextLabel?.text = viewModel.size
         return cell
     }
+    
+    // MARK: - AddOrderViewController delegates
+    func AddOrderViewControllerDidSaveOrder(order: Order,
+                                            controller: UIViewController) {
+        controller.dismiss(animated: true, completion: nil)
+        
+        let orderViewModel = OrderViewModel(order: order)
+        orderListViewModel.orderViewModels.append(orderViewModel)
+        
+        tableView.insertRows(at: [IndexPath.init(row: orderListViewModel.orderViewModels.count - 1,
+                                                 section: 0)],
+                             with: .automatic)
+    }
+    
+    func AddOrderViewControllerDidClose(_ controller: UIViewController) {
+        controller.dismiss(animated: true, completion: nil)
+    }
+    
+    
 }
