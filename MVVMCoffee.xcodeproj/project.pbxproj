@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE0BA3DD26E076190060D9FE /* AddCoffeeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0BA3DC26E076190060D9FE /* AddCoffeeViewModel.swift */; };
+		CEA660B826DF734E00540310 /* OrderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA660B726DF734E00540310 /* OrderViewModel.swift */; };
 		CEEE14B826DE24AB0087E6AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEE14B726DE24AB0087E6AD /* AppDelegate.swift */; };
 		CEEE14BA26DE24AB0087E6AD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEE14B926DE24AB0087E6AD /* SceneDelegate.swift */; };
 		CEEE14BF26DE24AB0087E6AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEEE14BD26DE24AB0087E6AD /* Main.storyboard */; };
@@ -14,9 +16,13 @@
 		CEEE14C426DE24AF0087E6AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEEE14C226DE24AF0087E6AD /* LaunchScreen.storyboard */; };
 		CEEE14CD26DE26AB0087E6AD /* OrdersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEE14CC26DE26AB0087E6AD /* OrdersTableViewController.swift */; };
 		CEEE14CF26DE27020087E6AD /* AddOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEE14CE26DE27020087E6AD /* AddOrderViewController.swift */; };
+		CEEE14D226DF63AE0087E6AD /* Webservice.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEE14D126DF63AE0087E6AD /* Webservice.swift */; };
+		CEEE14D526DF67DE0087E6AD /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEE14D426DF67DE0087E6AD /* Order.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CE0BA3DC26E076190060D9FE /* AddCoffeeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCoffeeViewModel.swift; sourceTree = "<group>"; };
+		CEA660B726DF734E00540310 /* OrderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewModel.swift; sourceTree = "<group>"; };
 		CEEE14B426DE24AB0087E6AD /* MVVMCoffee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVVMCoffee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEEE14B726DE24AB0087E6AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEEE14B926DE24AB0087E6AD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +32,8 @@
 		CEEE14C526DE24AF0087E6AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CEEE14CC26DE26AB0087E6AD /* OrdersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersTableViewController.swift; sourceTree = "<group>"; };
 		CEEE14CE26DE27020087E6AD /* AddOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOrderViewController.swift; sourceTree = "<group>"; };
+		CEEE14D126DF63AE0087E6AD /* Webservice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Webservice.swift; sourceTree = "<group>"; };
+		CEEE14D426DF67DE0087E6AD /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +47,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CEA660B626DF733B00540310 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				CEA660B726DF734E00540310 /* OrderViewModel.swift */,
+				CE0BA3DC26E076190060D9FE /* AddCoffeeViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		CEEE14AB26DE24AB0087E6AD = {
 			isa = PBXGroup;
 			children = (
@@ -58,7 +75,10 @@
 		CEEE14B626DE24AB0087E6AD /* MVVMCoffee */ = {
 			isa = PBXGroup;
 			children = (
+				CEEE14D326DF67B90087E6AD /* Models */,
+				CEA660B626DF733B00540310 /* ViewModels */,
 				CEEE14CB26DE24E60087E6AD /* Controllers */,
+				CEEE14D026DF639A0087E6AD /* Services */,
 				CEEE14B726DE24AB0087E6AD /* AppDelegate.swift */,
 				CEEE14B926DE24AB0087E6AD /* SceneDelegate.swift */,
 				CEEE14BD26DE24AB0087E6AD /* Main.storyboard */,
@@ -76,6 +96,22 @@
 				CEEE14CE26DE27020087E6AD /* AddOrderViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		CEEE14D026DF639A0087E6AD /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				CEEE14D126DF63AE0087E6AD /* Webservice.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		CEEE14D326DF67B90087E6AD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CEEE14D426DF67DE0087E6AD /* Order.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,9 +184,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEEE14D526DF67DE0087E6AD /* Order.swift in Sources */,
 				CEEE14B826DE24AB0087E6AD /* AppDelegate.swift in Sources */,
 				CEEE14BA26DE24AB0087E6AD /* SceneDelegate.swift in Sources */,
+				CE0BA3DD26E076190060D9FE /* AddCoffeeViewModel.swift in Sources */,
 				CEEE14CD26DE26AB0087E6AD /* OrdersTableViewController.swift in Sources */,
+				CEEE14D226DF63AE0087E6AD /* Webservice.swift in Sources */,
+				CEA660B826DF734E00540310 /* OrderViewModel.swift in Sources */,
 				CEEE14CF26DE27020087E6AD /* AddOrderViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
